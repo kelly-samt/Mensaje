@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Mensaje 😊 </title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #fefcfc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      color: #333;
+      transition: background-color 0.5s ease;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .screen {
+      display: none;
+      animation: fadeIn 0.8s ease;
+      width: 90%;
+      max-width: 600px;
+    }
+    .active {
+      display: block;
+    }
+    .main-img {
+      width: 280px;
+      height: auto;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border: none;
+      box-shadow: none;
+    }
+    .main-img:hover {
+      transform: scale(1.05);
+    }
+     
+    .card {
+      background: repeating-linear-gradient(
+        rgb(243, 239, 239),
+        rgb(248, 247, 247) 28px,
+        #f6f7f6 29px
+      );
+      border-radius: 0; /* esquinas en punta */
+      padding: 40px 60px;
+      border: 2px solid #e5e5e5;
+      width: 95%;
+      max-width: 900px;
+      text-align: left;
+      margin: 0 auto;
+      box-sizing: border-box;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease;
+    }
+    .card h3 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2em;
+      text-align: left;
+      margin-bottom: 20px;
+      margin-left: 10px;
+      color: #444;
+    }
+    .card p {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.3em;
+      line-height: 1.6;
+      text-align: justify;
+      color: #444;
+      margin: 10px 0;
+    }
+    .return-btn {
+      margin-top: 25px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: #ff4f81;
+      color: white;
+    }
+    .return-btn:hover {
+      background-color: #ff2a66;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.95);}
+      to {opacity: 1; transform: scale(1);}
+    }
+    /* Mini carta */
+.mini-card {
+  background: repeating-linear-gradient(
+    rgb(243, 239, 239),
+    rgb(206, 248, 206) 28px,
+    #d5f0d5 29px
+  );
+  border: 2px solid #e5e5e5;
+  padding: 25px 35px;
+  width: 70%;
+  max-width: 600px;
+  min-height: 200px;
+  margin: 0 auto;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  animation: fadeIn 1s ease;
+}
+
+.mini-card h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.mini-card p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1em;
+  line-height: 1.4;
+  text-align: justify;
+}
+  </style>
+</head>
+<body>
+    <audio id="music" preload="auto" loop>
+    <source src="Coldplay -  Viva La Vida.mp3" type="audio/mpeg">
+  </audio>
+  
+  <div class="screen active" id="screen1">
+    <h2>Hola </h2>
+    <img src="https://i.pinimg.com/originals/c0/41/bd/c041bd5efb200b18f9770a46b16fe757.png" alt="L" class="main-img" onclick="nextScreen(2)">
+  </div>
+  <div class="screen" id="screen2">
+    <h2>Una carta para ti</h2>
+    <img src="https://img.freepik.com/vector-premium/lindos-sobres-papel-artesanales-letras-decorativas-colores_543062-5199.jpg?w=360" alt="Carta" class="main-img" onclick="nextScreen(3)">
+  </div>
+  <div class="screen" id="screen3">
+    <h2>¡Ábrelo!</h2>
+    <img src="https://img.freepik.com/vector-premium/dibujo-mano-sobre-rosa-folleto-dibujo-garabato-vectorial-aislado-sobre-fondo-blanco_245580-1032.jpg?w=360" alt="Sobre" class="main-img" onclick="nextScreen(4)">
+  </div>
+ <div class="screen" id="screen4">
+    <div class="card">
+      <h3>Feliz cumpleaños</h3>
+      <p>Quiero desearte un bonito día, ojalá lo pases rodeado
+         de las personas que quieres, por fin alguien entro a la etapa de los 20. </p>
+      <p> También quería agradecerte, en todo este tiempo me ayudaste a entender 
+        mejor muchas cosas, no solo en los juegos, sino también sobre cómo son 
+        las personas, y sobre cómo manejar ciertas situaciones con más claridad 
+        y entenderlas sin tomarlas tan personal.</p>
+      <p> Lo admito das buenos consejos y valoro mucho la persona que eres, 
+        tan paciente, seguro, inteligente y divertido. Te aprecio más de lo que 
+        te imaginas y agradezco cada momento que compartimos. Estoy segura de que 
+        algún día vas a convertirte en un excelente profesor, pero no seas tan estricto.  </p>
+      <p> Sabes que siempre tendrás una buena amiga aquí y aunque no pueda darte un 
+        regalo, al menos espero que sepas que te tengo un cariño especial y 
+        no olvides que te quiero.</p>
+    </div>
+    <div style="text-align: center;">
+      <button class="return-btn" onclick="nextScreen(5)"> 🔜 Siguiente</button>
+    </div>
+    </div>
+  <div class="screen" id="screen5">
+    <div class="mini-card">
+      <h3>Un mensajito más</h3>
+      <p>"El amor es algo aterrador, no es seguro porque 
+        cuando amas a alguien debes enfrentar que podrías perderlo.</p>
+      <p>A veces la vida te lanza dolores inesperados, 
+        podrías estar en peligro de perder tu carrera, 
+        tu libertad o peor aún podrías enterarte que murió un ser querido. 
+        Estas cosas te hacen entender lo preciada que es la vida, 
+        lo importante que es cada segundo en esta tierra y lo importante 
+        que son las personas que amamos.</p>
+      <p>Ninguno sabe cuánto tiempo tenemos, podría ser un minuto, 
+        una hora o podría ser cincuenta años. 
+        Pero sé que incluso si son cien años nunca tendré suficiente 
+        tiempo contigo. Desde el día que nacemos, buscamos amor, 
+        porque es el amor lo que nutre el alma y cuando tenemos suerte de encontrarlo, 
+        nuestra vida cambia para siempre"</p>
+      <p>Gracias por esta buena serie ✨</p>
+    </div>
+    <div style="text-align: center;">
+      <button class="return-btn" onclick="nextScreen(1)">🏠 Volver al inicio</button>
+  </div>
+    </div>
+  <script>
+    function nextScreen(num) {
+      const current = document.querySelector(".screen.active");
+      if (current) current.classList.remove("active");
+      document.getElementById("screen" + num).classList.add("active");
+    }
+  
+  </script>
+  
+   <script>
+    const music = document.getElementById("music");
+    music.volume = 0.05; // volumen bajo (10%)
+
+    function nextScreen(num) {
+      const current = document.querySelector(".screen.active");
+      if (current) current.classList.remove("active");
+      document.getElementById("screen" + num).classList.add("active");
+
+      // Reproduce la música cuando pasa de pantalla 3 → 4
+      if (num === 5) {
+        music.play().catch(() => {
+          document.addEventListener("click", () => music.play(), { once: true });
+        });
+
+      }
+       else {
+      // Si sale de pantalla 4, detiene la música
+      music.pause();
+      music.currentTime = 0; // reinicia sonido
+      }
+    }
+    
+  </script>
+</body>
+</html>
